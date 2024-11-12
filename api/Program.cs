@@ -12,9 +12,15 @@ app.UseCors(p =>
 
 app.MapGet("/", () => "Hello World!");
 
+var fileString = "";
+
 app.MapPost("/fileUpload", (FileUploadRequestBody body) => {
     Console.WriteLine("in file upload");
     Console.WriteLine(body.Base64File);
+});
+
+app.MapGet("/file", () => {
+    return fileString;
 });
 
 app.Run();
