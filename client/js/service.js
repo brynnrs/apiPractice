@@ -20,3 +20,9 @@ export const storeFileOnApi = async (fileAsString) => {
         }
     })
 }
+
+export const getBase64FileFromApi = async () => {
+    const url = baseURL + "file"
+    const response = await fetch(url)
+    return await response.text()
+}
