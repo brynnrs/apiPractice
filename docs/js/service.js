@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:5132/"
+const baseURL = "https://apipractice-3seu7s65.b4a.run/"
 
 export const getSomethingFromApi = async () =>{
     const response = await fetch(baseURL)
